@@ -48,7 +48,6 @@ function App() {
       return
     }
     if (opertr === "persen") {
-      console.log("masuk ke persen");
       const value = calculate(currentValue, 'persen', 0);
       setCurrentValue(value);
       return;
@@ -79,11 +78,11 @@ function App() {
   // console.log(currentValue.length)
   return (
     <div className="w-full min-h-screen flex justify-center items-center">
-      <div className="w-[50%] grid grid-cols-4 gap-1 rounded-3xl text-5xl font-semibold text-center">
-        <div className="col-span-4 bg-slate-500 rounded-sm p-5 text-white text-right">
+      <div className="w-full grid grid-cols-4 gap-1 rounded-3xl text-5xl font-semibold text-center sm:w-[75%] md:w-[60%] md:my-2 lg:w-[50%] lg:my-2">
+        <div className="col-span-4  bg-slate-500 rounded-sm p-5 text-white text-right">
           {currentValue.length === 0 ? 0 : currentValue}
         </div>
-        <div className="" onClick={() => clear()}>
+        <div className="m-0" onClick={() => clear()}>
           <Button type="operator">AC</Button>
         </div>
         <div className="" onClick={() => backspace()}>
